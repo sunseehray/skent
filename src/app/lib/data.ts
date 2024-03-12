@@ -9,3 +9,12 @@ export async function fetchUsers() {
         throw new Error('Failed to fetch users data.');
     }
 }
+
+export async function fetchUserById(id: number) {
+    try {
+        const data = await sql<User>`SELECT * FROM skent.user WHERE user_id = ${id}`;
+        return data.rows[0];
+    } catch(error) {
+        throw new Error('Failed to fetch user data.');
+    }
+}
