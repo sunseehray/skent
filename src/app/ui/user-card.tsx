@@ -1,39 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { patrick_hand } from "./fonts";
+import { fetchUsers } from "../lib/data";
 
-const users = [
-  {
-    id: 1,
-    name: "Max",
-    image: "/images/max.png",
-    points: 4,
-    password: "1234",
-  },
-  {
-    id: 2,
-    name: "Sander",
-    image: "/images/sander.png",
-    points: 3,
-    password: "1234",
-  },
-  {
-    id: 3,
-    name: "Julian",
-    image: "/images/julian.png",
-    points: 2,
-    password: "1234",
-  },
-];
 
-export default function UserCards() {
+export default async function UserCards() {
+  const users = await fetchUsers();
   return (
     <>
       {users.map((user) => {
-        const name = user.name;
+        const name = user.username;
         const image = user.image;
         const points = user.points;
-        const id = user.id;
+        const id = user.user_id;
 
         return (
           <Link key={name} href={`/account/${id}`}
