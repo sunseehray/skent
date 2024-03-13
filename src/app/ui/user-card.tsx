@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { patrick_hand } from "./fonts";
+import { patrick_hand, inter } from "./fonts";
 import { fetchUsers } from "../lib/data";
 
 
@@ -16,7 +16,7 @@ export default async function UserCards() {
 
         return (
           <Link key={name} href={`/account/${id}`}
-          className="flex flex-col rounded-lg p-4 gap-1 bg-white items-center shadow-md"
+          className="flex flex-col rounded-lg p-4 gap-1 bg-white text-black items-center shadow-md"
           >
             <Image
               src={image}
@@ -26,7 +26,7 @@ export default async function UserCards() {
               className="rounded-full"
             />
             <p className={`${patrick_hand.className} text-xl`}>{name}</p>
-            <p className={`${patrick_hand.className} text-2xl`}>{points}</p>
+            <p className={`${inter.className} text-2xl`}>{points}</p>
           </Link>
         );
       })}
