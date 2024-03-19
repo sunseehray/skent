@@ -19,6 +19,11 @@ const links = [
     icon: PlusCircleIcon,
   },
   {
+    name: "Account",
+    href: "/account",
+    icon: UserCircleIcon,
+  },
+  {
     name: "Withdraw",
     href: "/withdraw",
     icon: UserMinusIcon,
@@ -27,11 +32,6 @@ const links = [
     name: "Deposit",
     href: "/deposit",
     icon: UserPlusIcon,
-  },
-  {
-    name: "Account",
-    href: "/update",
-    icon: UserCircleIcon,
   },
 ];
 
