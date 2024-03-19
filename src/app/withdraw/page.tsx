@@ -1,3 +1,5 @@
+import UnderConstructionPage from "../ui/under-construction";
+
 export default function Page() {
-  return <div>Withdraw</div>;
+  return <UnderConstructionPage />;
 }

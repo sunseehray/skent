@@ -14,9 +14,14 @@ import clsx from "clsx";
 // Depending on the size of the application, this would be stored in a database.
 const links = [
   {
-    name: "Add Points",
-    href: "/update",
+    name: "Submit Check",
+    href: "/check",
     icon: PlusCircleIcon,
+  },
+  {
+    name: "Account",
+    href: "/account",
+    icon: UserCircleIcon,
   },
   {
     name: "Withdraw",
@@ -27,11 +32,6 @@ const links = [
     name: "Deposit",
     href: "/deposit",
     icon: UserPlusIcon,
-  },
-  {
-    name: "Account",
-    href: "/account",
-    icon: UserCircleIcon,
   },
 ];
 
